@@ -16,7 +16,7 @@ Partial Class Login_Possible_New
 
 
     Protected Sub B_Logout_Click(sender As Object, e As EventArgs) Handles B_Logout.Click
-        Session("New") = Nothing
+        Session("New2") = Nothing
         Response.Redirect("Login.aspx")
 
     End Sub

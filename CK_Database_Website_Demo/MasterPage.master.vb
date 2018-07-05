@@ -3,8 +3,10 @@
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Label_UserLoggedIn.Load
-        If (Session("New") IsNot Nothing) Then
+        If (Session("New2") IsNot Nothing) Then
             Label_UserLoggedIn.Text = Session("New").ToString & " Logged In"
+        Else
+            Response.Redirect("Login.aspx")
 
         End If
 
