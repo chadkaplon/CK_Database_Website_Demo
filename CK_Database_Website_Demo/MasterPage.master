@@ -1,0 +1,47 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Chad's Web Forms Demonstration 1 (VB.NET)</title>
+    <link href="Styles.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            font-size: large;
+            background-color: #FFFFFF;
+        }
+        .auto-style2 {
+            background-color: #6699FF;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+    <form id="form1" runat="server">
+        <div id="header">
+                <span class="title"><span class="auto-style1"><strong>Chad's Web Forms Demonstration 1 (VB.NET)</strong></span></span>
+                <br />
+                <asp:Label ID="Label_UserLoggedIn" runat="server"></asp:Label>
+                <br />
+            </div>
+    <div id="Content"> 
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <div id="navigation">
+                <asp:Menu ID="Menu1" runat="server" CssClass="auto-style2" ForeColor="Black">
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/NursingHomeStateAverages.aspx" Text="Nursing Home State Averages" Value="Home"></asp:MenuItem>
+                    <asp:MenuItem Text="Registration Database" Value="Registration Database"></asp:MenuItem>
+                </Items>
+            </asp:Menu>
+            </div>
+    </form>
+    </div>
+</body>
+</html>
+
