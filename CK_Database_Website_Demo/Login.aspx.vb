@@ -29,7 +29,7 @@ Partial Class Default2
             Dim passconn = New SqlCommand(checkpasswordquery, Conn)
             Dim password = passconn.ExecuteScalar().ToString().Replace(" ", "")
             If (password = TextBoxPassword.Text) Then
-                Session("New") = TextBoxUserName.Text
+                Session("New2") = TextBoxUserName.Text
                 Response.Write("Password is correct")
                 Response.Redirect("Users.aspx")
             Else
