@@ -8,9 +8,10 @@ Imports System.Linq
 Imports System.Collections.Generic
 Imports System.String
 
-Partial Class Default2
+Partial Class Login
 
     Inherits System.Web.UI.Page
+
 
 
 
@@ -29,7 +30,7 @@ Partial Class Default2
             Dim passconn = New SqlCommand(checkpasswordquery, Conn)
             Dim password = passconn.ExecuteScalar().ToString().Replace(" ", "")
             If (password = TextBoxPassword.Text) Then
-                Session("New2") = TextBoxUserName.Text
+                Session("New") = TextBoxUserName.Text
                 Response.Write("Password is correct")
                 Response.Redirect("Users.aspx")
             Else
@@ -42,4 +43,6 @@ Partial Class Default2
 
         Conn.Close()
     End Sub
+
+
 End Class

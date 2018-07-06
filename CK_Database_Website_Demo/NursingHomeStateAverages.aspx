@@ -1,13 +1,11 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="NursingHomeStateAverages.aspx.vb" Inherits="_Default" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="NursingHomeStateAverages.aspx.vb" Inherits="_Default" MasterPageFile="~/MasterPage.master" %>
 
-<!DOCTYPE html>
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    
+    <asp:Label ID="Label_UserLoggedIn" runat="server"></asp:Label>
+        
+            <br />
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" DataSourceID="Nursing_State_Averages" GridLines="Vertical">
             <AlternatingRowStyle BackColor="#DCDCDC" />
             <Columns>
@@ -66,7 +64,9 @@
         </asp:GridView>
         <asp:SqlDataSource ID="Nursing_State_Averages" runat="server" ConnectionString="<%$ ConnectionStrings:cktest1ConnectionString %>" SelectCommand="SELECT * FROM [StateAverages_Download]"></asp:SqlDataSource>
         <div>
+            <br />
+            <asp:Button ID="B_Logout" runat="server" Text="Logout" />
         </div>
-    </form>
-</body>
-</html>
+
+    </asp:Content>
+    

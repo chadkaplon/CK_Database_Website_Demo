@@ -24,7 +24,6 @@
         <div id="header">
                 <span class="title"><span class="auto-style1"><strong>Chad's Web Forms Demonstration 1 (VB.NET)</strong></span></span>
                 <br />
-                <asp:Label ID="Label_UserLoggedIn" runat="server"></asp:Label>
                 <br />
             </div>
     <div id="Content"> 
@@ -35,10 +34,11 @@
         <div id="navigation">
                 <asp:Menu ID="Menu1" runat="server" CssClass="auto-style2" ForeColor="Black">
                 <Items>
-                    <asp:MenuItem NavigateUrl="~/NursingHomeStateAverages.aspx" Text="Nursing Home State Averages" Value="Home"></asp:MenuItem>
-                    <asp:MenuItem Text="Registration Database" Value="Registration Database"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/NursingHomeStateAverages.aspx" Text="Nursing Home State Averages" Value="Nursing Home State Averages"></asp:MenuItem>
+                    <asp:MenuItem Text="Registration Database" Value="Registration Database" NavigateUrl="~/RegistrationDatabase.aspx"></asp:MenuItem>
                 </Items>
             </asp:Menu>
+                <br />
             </div>
     </form>
     </div>
